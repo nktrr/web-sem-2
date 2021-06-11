@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: comic sans MS;
+}
+
+h1{
+  text-align: center;
+}
+
+
+body{
+	background:#fafafa;
+}
+
+.container{
+  margin: 1%;
+  display: flex;
+}
+
+.item{
+  width: 100px;
+  height: 100px;
+  margin: 2%;
+  color: white;
+  background: rgb(2,0,36);
+  box-sizing: border-box;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.item p{
+  padding: 35px;
+}
+
+.justify{
+  justify-content:space-around;
+}
+.justify-between{
+  justify-content:space-between;
+}
+.center{
+  justify-content: center;
+}
+
+.direction{
+  flex-direction: column;
+}
+
+.reverse{
+  flex-direction: column-reverse;
+}
+.flex_wrap{
+  flex-wrap: wrap;
+}
+.flex_wrap{
+  flex-wrap: nowwrap;
+}

@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #fff;
+  font-size: 1em;
+}
+
+.header_wrapper{
+  padding: 0 5%;
+}
+
+.header__menu{
+  background-color: #fff;
+  
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+}
+.right__items{
+  margin-top: 2em;
+}
+
+.right__href{
+  margin: 15px;
+  font-family: Roboto;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+.right__href:hover{
+  border-bottom: 2px solid black;
+}
+
+.logo{
+  margin: 12px;
+}
+
+.main{
+  width: 100%;
+  height: 505px;
+  background-image: url("https://sun9-46.userapi.com/impg/sViDGSbiLbnvCoYjEPF2KwTnncM5DPEhcvDsWw/NkJpW2QTjh8.jpg?size=1366x504&quality=96&sign=77863959028bd401b920a7bc5bf45e75&type=album");
+  background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+}
+
+.main__content{
+  padding-left: 10%;
+  padding-top: 8%;
+}
+
+.main__city{
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main__header{
+  font-family: Rubik;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 73px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main__comment{
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main__button{
+  margin: 40px 0;
+  background: #FFFEFD;
+  border: none;
+  box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+  border-radius: 25px;
+  display: flex;
+  cursor: pointer;
+}
+
+.button__text{
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 18px 20px 20px 30px;
+}
+
+.button__img{
+  margin: 10px 9px 7px 7px;
+}
+
+.advantages{
+  padding: 5%;
+}
+
+.advantages__header{
+  text-align: center;
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+
+}
+
+.advantages__body{
+ width: 100%;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.advantages__card{
+  flex-basis: 500px;
+
+  flex-shrink: 0;
+  min-height: 311px;
+  margin: 20px 30px 0px 0px;
+  padding: 2.5em;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+}
+
+.card__img{
+  margin-bottom: 35px;
+}
+
+.card__title{
+  font-family: Rubik;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card__text{
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 20px
+}
+
+.rooms{
+  margin-top: 5%;
+
+}
+.room{
+  position: relative;
+  background-image: url(../img/fish.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+}
+.room__current{
+  margin-top: 2em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.room__description_wrapper{
+  position: relative;
+  width: 500px;
+  height: 284px;
+  display: block;
+  margin-left: -100px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+}
+
+.room__description{
+  padding: 5% 10% 5% 20%;
+}
+
+.description__title{
+  font-family: Rubik;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.description_li::marker{
+  margin-left: 100px;
+}
+
+.description__ul{
+  margin-top: 30px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  list-style-image: url("../img/marker.png");
+  list-style-position: inside;
+}
+
+
+.description_li{
+  margin: 20px 0px;
+}
+
+
+.description__button{
+  margin: 20px 0;
+  background: #FF7236;
+  border: none;
+  box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+  border-radius: 25px;
+  display: flex;
+  cursor: pointer;
+  color: white;
+}
+
+
+.feedback{
+  margin-top: 5%;
+}
+
+.feedback__list{
+  margin-left: 98px;
+  display: flex;
+  align-items: stretch;
+  margin-top: 70px;
+}
+
+.feedback__item{
+  margin-right: 30px;
+  padding: 35px 38px 70px 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.feedback__text{
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+.feedback__data{
+  margin-top: 25px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  justify-content: space-between;
+  color: #848484;
+
+}
+
+.quote{
+  width: 27px;
+  height: 56px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 86px;
+  color: #FAC663;
+}
+
+.contacts{
+  display: flex;
+  margin-top: 140px;
+  width: 100%;
+}
+
+.contacts__about{
+  background-color: #FAC663;
+  padding-top: 70px;
+  padding-left: 198px;
+  width: 568px;
+  flex-grow: 2;
+}
+
+.contacts__map{
+  flex-grow: 2;
+}
+
+.contacts__map img{
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__about p{
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.contacts__about h4{
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.contacts__about h2{
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.info{
+  display: flex;
+  margin-left: 212px;
+  margin-right: 200px;
+  justify-content: space-between;
+}
+
+.info p{
+  color: #8F8F8F;
+  margin: 20px 0px;
+
+  font-family: Roboto;
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+footer .menu{
+  background-color: #fff;
+  padding: 0 5%;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__items{
+  margin-top: 32px;
+}
+
+.menu__href{
+  margin: 15px;
+  font-family: Roboto;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+hr{
+  background-color: #EFEFEF;
+}
+@media(max-width: 1400px){
+  .advantages__card{
+     flex-basis: 300px;
+    
+  }
+}
+@media(max-width: 1280px){
+  .advantages {
+   margin: 0;
+}
+  .feedback__list{
+    padding:0 1em;
+    box-sizing: border-box;
+    width: 100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  
+  }
+  .feedback__item{
+    box-sizing: border-box;
+  margin-top: 30px;
+  padding: 35px 38px 70px 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  
+
+
+}
+
+@media(max-width: 960px){
+  .contacts{
+  display: flex;
+ flex-direction: column;
+}
+.contacts__about{
+  width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+footer .menu{
+  flex-direction: column;
+  padding: 0;
+  height: auto;
+}
+.menu__items{
+  display: flex;
+  flex-direction: column;
+}
+.room__description_wrapper{
+  margin-left: -400px;
+}
+}
+@media(max-width: 720px){
+  .room__current{
+    flex-direction: column;
+  }
+  .room__img{
+    margin:0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .room__description_wrapper{
+    margin-top: -100px;
+ margin-left: 0;
+ width: 100%;
+}
+.main__content{
+  padding: 50px;
+}
+ .header__menu .menu__right{
+  display: none;
+ }
+ .header__menu{
+  padding: 5px;
+ }
+ .info{
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+ }
+}

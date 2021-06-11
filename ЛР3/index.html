@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ЛР3 Rudnev Nikita</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!-- Compressed CSS -->
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="dist/assets/owl.theme.default.min.css">
+</head>
+<body>
+	<header>
+		<div class="header_title">
+			<h1>Библиотеки</h1>
+		</div>
+		
+	</header>
+	<main >
+		<section class="main-wrapper">
+			<div class="main-wrapper__column">
+				<h2>Использованные CSS-Библиотеки</h2>
+				<ul>
+					<li class="hover-spacing">Bootstrap 4</li>
+				</ul>
+				<h2>Использованные JS-Библиотеки</h2>
+				<ul>
+					<li class="hover-spacing">JQuery</li>
+					<li class="hover-spacing">Owl-carousel</li>
+				</ul>
+			</div>
+		
+		</section>
+		<section>
+			<h1 class="header_title">JS-Библиотеки</h1>
+			<h2 class="text-center">OWL CAROUSEL library</h2>
+			<div class="owl-carousel owl-theme">
+			    <div class="item" style="width:100px"><img class="w-100" src="images/img1.jpg" alt="img"></div>
+			    <div class="item" style="width:100px"><img class="w-100" src="images/img2.jpg" alt="img"></div>
+			    <div class="item" style="width:100px"><img class="w-100" src="images/img3.jpg" alt="img"></div>
+			    <div class="item" style="width:100px"><img  class="w-100" src="images/img4.jpg" alt="img"></div>
+			</div>
+			<h2 class="text-center">Библиотека - "JQuery"</h2>
+			<div class="text-center">Использование библиотек позволяет сделать сайт более динамическим. Например, тут с помощью JQuery реализована функция смещения картинки при нажатии на нее</div>
+			<div class="row justify-content-center">
+				<img id="rotateble"class="w-25 image-rotate" src="images/img2.jpg" alt="img">
+			</div>
+			<button class="col-12" id="defaultPosButton">В начало!</button>
+		</section>
+		<section>
+			<h1 class="header_title">CSS-Библиотека Bootstrap</h1>
+			<div class="row col-10 offset-1">
+				<div class="col-lg-4  col-md-3 badge-success ">
+					Эта колонка занимает 33% пространства на широких экранах благодаря классу col-lg-4 из bootstrap, но на средних экранах она будет занимать меньшую часть благодогя col-md
+				</div>
+				<div  class="col-lg-4 col-md-6 badge-info">
+					Эта колонка занимает 33% пространства на широких экранах благодаря классу col-lg-4 из bootstrap, но на средних экранах она будет занимать меньшую БОЛЬШУЮ благодогя col-md
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Нажми на меня
+</button>
+				</div>
+				<div  class="col-lg-4  col-md-3 badge-success">
+					Эта колонка занимает 33% пространства на широких экранах благодаря классу col-lg-4 из bootstrap, но на средних экранах она будет занимать меньшую часть благодогя col-md
+				</div>
+			</div>
+			<!-- Button trigger modal -->
+<div class="row justify-content-between col-10 offset-1 mt-5 mb-5">
+				<div class="col-lg-3  col-md-3 badge-success ">
+					Контент колонки 1
+				</div>
+				<div  class="col-lg-3 col-md-6 badge-info">
+					Контент колонки 2
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Нажми на меня
+</button>
+				</div>
+				<div  class="col-lg-3  col-md-3 badge-success">
+					Контент колонки 3
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Этот поп-ап</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <img src="images/img1.jpg" class="w-100" alt="img1" style="object-fit: contain;">
+			       Попап окно.
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			        <button type="button" class="btn btn-primary">Кнопка</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</section>
+		
+		</main>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="dist/owl.carousel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	
+</script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="scripts/main.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $(".owl-carousel").owlCarousel();
+		});
+		$('.owl-carousel').owlCarousel({
+			center:true,
+		    margin:10,
+		    loop:true,
+		    autoWidth:true,
+		    autoHeight:true,
+		    items:4,
+		    responsive:{
+		        600:{
+		            items:10
+		        }
+		    }
+		})
+	</script>
+</body>
+</html>
