@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rudnev lab 10</title>
+	<link rel="stylesheet" type="text/css" href="styles/sass.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1 class="main-title">Препроцессоры - лабораторная работа</h1>
+	<div class="difference">
+	<h2 class="difference__title">Разница CSS и SCSS</h2>
+		<pre class="diff-col">
+			<span>SCSS</span>
+			.square-wrapper{
+				margin-top: 1%;
+				display: flex;
+				justify-content: space-around;
+				width: 100%;
+				.square{
+					cursor: pointer;
+					width: 150px;
+					height: 150px;
+					transition-property: all;
+					background: rgb(2,0,36);
+					background: $grad_blue;
+					text-align: center;
+					color: white;
+					font-weight: 600;
+					font-size: 1.5em;
+					&:hover{
+						width: 180px;
+						height: 180px;
+						transition: 0.4s;
+					}
+				}
+			}		
+		</pre>
+		<pre class="diff-col">
+			<span>CSS</span>
+				.square-wrapper {
+					margin-top: 1%;
+					display: flex;
+					justify-content: space-around;
+					width: 100%;
+				  }
+				  .square-wrapper .square {
+					cursor: pointer;
+					width: 150px;
+					height: 150px;
+					transition-property: all;
+					background: #020024;
+					background: linear-gradient();
+					text-align: center;
+					color: white;
+					font-weight: 600;
+					font-size: 1.5em;
+				  }
+		</pre>
+	</div>
+	<h2 class="difference__title">Вложенность</h2>
+	<div class="sass-color">
+		Текст <span>Вложенный текст</span> продолжение
+	</div>
+	<div class="more-dif">
+		<p>Заголовок вложенности 0</p>
+		<div>
+			<p>Заголовок вложенности 1</p>
+			<div>
+				<p>Заголовок вложенности 2, а еще свойство hover тут реализовано с помощью оператора "&"</p>
+			</div>
+		</div>
+	</div>
+	<h2 class="difference__title">Переменные</h2>
+	<div class="square-wrapper">
+		<div class="square">Фон задан переменной</div>
+		<div class="square">Фон задан переменной</div>
+		<div class="square">Фон задан переменной</div>
+	</div>
+	<h2 class="difference__title">Шаблоны, миксины, %, include и extend</h2>
+	<div class="patterns">
+		<a class="link-1" href="#">Пример ссылки, которая сделана с помощью шаблона</a>
+		<a class="link-2" href="#">Свойства этой ссылки реализованы с помощью @include миксином, который принимает 2 параметра - размер шрифта и жирность шрифта</a>
+		<h1>Синий бордер реализован с помощью шаблона % и @extend</h1>
+	</div>
+	<h2 class="difference__title">Вычисления</h2>
+	<div class="math">Математика!
+		<pre>
+			.math{
+				background: pink;
+				width: 300px / 960px * 100%;
+				height: 200px * 0.5;
+				margin-left: (100% - (300px / 960px * 100%))/2;
+			}
+		</pre>	
+	</div>
+	<h2 class="difference__title">Функции и Модуль color</h2>
+	<div class="map1">
+		<span>Бекграунд этого блока задан с помощью map get-map</span>
+	</div>
+	<span>Цвет этого текста задан с помощью "+"</span>
+	<div class="map2">
+		Бекграунд этого блока задан с помощью map get-map
+	</div>
+	<div class="map3">
+		Бекграунд этого блока задан с помощью map get-map
+	</div>
+	<div class="colormodule">Модуль Color</div>
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
