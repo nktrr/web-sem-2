@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Rudnev lr 2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+           <h1>SVG Формат</h1>
+        </header>
+        <main>
+            <span class="svg_title">Базовые примитивы</span>
+            <span class="svg_title">Линия</span>
+            <svg width="300" height="300" viewBox="0 0 100 100">
+              <path d="M10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
+               <path d="M70 10 C 70 20, 120 20, 120 10" stroke="black" fill="transparent"/>
+              <path d="M130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
+              <path d="M10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
+              <path d="M70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
+            </svg>
+            <svg width="300" height="300" viewBox="0 0 100 100">
+              <path d="M10 10 C 50 20, 40 20, 50 10" stroke="black" fill="transparent"/>
+               <path d="M70 10 C 70 90, 120 20, 120 10" stroke="black" fill="transparent"/>
+              <path d="M130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
+              <path d="M10 60 C 20 20, 40 80, 50 60" stroke="black" fill="transparent"/>
+              <path d="M70 60 C 70 60, 110 80, 110 60" stroke="black" fill="transparent"/>
+            </svg>
+            
+            <span class="svg_title">Фигура из линий</span>
+             <svg width="300" height="300" viewBox="0 0 100 100">
+              <path x="0" y="0" d="M200 10 C 50 20, 100 20, 20 20" stroke="black" fill="transparent"/>
+              <path x="0" y="0" d="M20 100 C 20 20, 20 20, 20 20" stroke="black" fill="transparent"/>
+              <path x="0" y="0" d="M0 0 C 60 20, 20 20, 20 20" stroke="black" fill="transparent"/>
+            </svg>
+            <span class="svg_title">Прямоугольник (hover)</span>
+            <svg id="Rect" svg width="200" height="200" viewBox="0 0 100 100">
+                <rect x="0" y="0" width="100" height="100" />
+            </svg>
+            <span class="svg_title">Толстая Линия с stroke-width </span>
+            <svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
+                  <line x1="10" x2="170" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
+
+                  <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
+                  <line x1="00" x2="500" y1="80" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
+            </svg>
+            <span class="svg_title">Круг</span>
+            <svg width="400" height="400" viewBox="0 0 100 100" >
+              <circle cx="50" cy="50" r="20"/>
+              <circle cx="50" cy="50" r="20" fill="blue"/>
+            </svg>
+              <span class="svg_title">Заливка и обводка</span>
+            <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polyline points="80 60 80 20 120 60" stroke="black" stroke-width="3"
+                  stroke-linecap="butt" fill="white" stroke-linejoin="miter"/>
+
+              <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="2"
+                  stroke-linecap="round" fill="blue" stroke-linejoin="round"/>
+
+              <polyline points="40 220 80 280 120 220" stroke="black" stroke-width="5"
+                  stroke-linecap="square" fill="red" stroke-linejoin="bevel"/>
+            </svg>
+            <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
+                stroke-linecap="round" stroke-width="5" stroke-dasharray="5,10,5" fill="yellow"/>
+              <path d="M 10 75 L 190 75" stroke="red"
+                stroke-linecap="round" stroke-width="5" stroke-dasharray="5,5" fill=""/>
+            </svg>
+             <span class="svg_title">preserveAspectRatio</span>
+             <svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+     <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs>
+
+  <!-- (width>height) meet -->
+  <svg preserveAspectRatio="xMidYMid meet"  x="0"   y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMinYMid meet"  x="25"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMaxYMid meet"  x="50"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+
+  <!-- (width>height) slice -->
+  <svg preserveAspectRatio="xMidYMin slice" x="0"   y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMid slice" x="25"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMax slice" x="50"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+
+  <!-- (width<height) meet -->
+  <svg preserveAspectRatio="xMidYMin meet"  x="75"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMid meet"  x="90"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMax meet"  x="105" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+
+  <!-- (width<height) slice -->
+  <svg preserveAspectRatio="xMinYMid slice" x="120" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMid slice" x="135" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMaxYMid slice" x="150" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+
+  <!-- none -->
+  <svg preserveAspectRatio="none"           x="0"   y="30" viewBox="0 0 100 100" width="70" height="20"><use href="#smiley" /></svg>
+</svg>
+        </main>
+    </body>
+</html>
