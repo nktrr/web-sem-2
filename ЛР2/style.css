@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: padding-box;
+}
+body{
+  background: rgba(0,0,0,0.8);
+    background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?size=626&ext=jpg&ga=GA1.2.1588707983.1618099200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    
+}
+
+header{
+    color:  black;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.svg_title{
+    margin-top: 50px;
+    font-weight: 600;
+}
+#Rect:hover{
+    stroke: silver;
+    fill: blue;
+    stroke-width:10px;
+}
