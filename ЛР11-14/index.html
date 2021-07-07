@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/white.css">
+	<link rel="stylesheet" href="css/dark.css">
+	<title>Канбан Доска</title>
+</head>
+
+<body>
+	<div class="all" :class="[isActive ? 'd-all' : '']">
+		<transition name="fade">
+			<div class="wrap-modal" :class="[isActive ? 'd-wrap-modal' : '']" v-show="mod">
+				<form action="#" class="wrap-modal__form" :class="[isActive ? 'd-wrap-modal__form' : '']">
+					<button v-if="obj.statusCheck" class="add__button-off" :class="[isActive ? 'd-add__button-off' : '']"
+						@click="close()"><span></span></button>
+					<div class="inner-wrap__form">
+						<label v-if="obj.statusCheck" class="wrap-modal__input"
+							:class="[isActive ? 'd-wrap-modal__input' : '']">Описание
+							<input v-model="obj.nameTask" class="add__input" :class="[isActive ? 'd-add__input' : '']"
+								value="{{newTask}}" type="text" placeholder="Введите описание">
+						</label>
+						<label v-if="obj.statusCheck" class="wrap-modal__input"
+							:class="[isActive ? 'd-wrap-modal__input' : '']">Статус
+							<select v-model="obj.status" class="add__input" :class="[isActive ? 'd-add__input' : '']" name="">
+								<option selected disabled value="">Выберите статус</option>
+								<option value="plan">План</option>
+								<option value="work">В работе</option>
+								<option value="done">Готово</option>
+							</select>
+						</label>
+						<label class="wrap-modal__input" :class="[isActive ? 'd-wrap-modal__input' : '']">Имя пользователя
+							<input :disabled="disableTrust" v-model="obj.trust" class="add__input"
+								:class="[isActive ? 'd-add__input' : '']" type="text" placeholder="Введите имя">
+						</label>
+						<label v-if="obj.statusCheck" class="wrap-modal__input"
+							:class="[isActive ? 'd-wrap-modal__input' : '']">Дата и время начала
+							<input :disabled="disableDateStart" v-model="obj.dateStart" class="add__input"
+								:class="[isActive ? 'd-add__input' : '']" type="text" placeholder="Введите дату начала">
+						</label>
+						<label v-if="obj.statusCheck" class="wrap-modal__input"
+							:class="[isActive ? 'd-wrap-modal__input' : '']">Дата и время завершения
+							<input v-model="obj.dateEnd" class="add__input" :class="[isActive ? 'd-add__input' : '']" type="text"
+								:disabled="disableDateEnd" placeholder="Дата завершения">
+						</label>
+					</div>
+					<button class="add__btn" :class="[isActive ? 'd-add__btn' : '']" type="submit"
+						@click="add(), c()"><span></span></button>
+				</form>
+			</div>
+		</transition>
+		<div class="inner__all">
+			<header class="header">
+				<h1 class="header__title" :class="[isActive ? 'd-header__title' : '']">Канбан</h1>
+				<div class="wrap-theme">
+					<span class="wrap-theme__label" :class="[isActive ? 'd-wrap-theme__label' : '']">Темная тема</span>
+					<div class="wrap-theme__mode" :class="[isActive ? 'd-wrap-theme__mode' : '']" @click="tc">
+						<span class="wrap-theme__on"><span></span></span>
+						<span class="wrap-theme__cyrcle" :class="[isActive ? 'active' : '']"></span>
+						<span class="wrap-theme__off"><span></span></span>
+					</div>
+				</div>
+			</header>
+
+			<main class="main">
+				<section class="add">
+					<label class="add__label" :class="[isActive ? 'd-add__label' : '']">Создание задачи
+						<input class="add__input" :class="[isActive ? 'd-add__input' : '']" type="text" v-model="obj.nameTask"
+							placeholder="Описание">
+					</label>
+					<button class="add__button-on" :class="[isActive ? 'd-add__button-on' : '']"
+						@click="first(), c()"><span></span></button>
+				</section>
+				<section class="wrap__box">
+					<div class="box" @drop='onDrop($event, "plan")' @dragover.prevent @dragenter.prevent
+						:class="[isActive ? 'd-box' : '']">
+						<h2 class="box__title">План ({{count.cPlan}})</h2>
+						<div class="task" :class="[isActive ? 'd-task' : '']" v-for="(tsk, index) in tasks" :key='tsk.nameTask'
+							draggable @dragstart='startDrag($event, tsk)' v-if="tsk.status ==='plan'">
+							<div class="task__wrap-text">
+								<h3 class="task__title" :class="[isActive ? 'd-task__title' : '']">{{tsk.name}}</h3>
+								<p class="task__desc" :class="[isActive ? 'd-task__desc' : '']" v-if="tsk.nameTask !== '' ">
+									{{tsk.nameTask}}
+								</p>
+							</div>
+							<div class="task__wrap">
+								<button @click="edit(index)">
+									Редактировать
+								</button>
+								<button @click="complite(index)">
+									Готово
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="box" @drop='onDrop($event, "work")' @dragover.prevent @dragenter.prevent
+						:class="[isActive ? 'd-box' : '']">
+						<h2 class="box__title">В работе ({{count.cWork}})</h2>
+						<div class="task" :class="[isActive ? 'd-task' : '']" v-for="(tsk, index) in tasks" :key='tsk.nameTask'
+							draggable @dragstart='startDrag($event, tsk)' v-if="tsk.status ==='work'">
+							<div class="task__wrap-text">
+								<h3 class="task__title" :class="[isActive ? 'd-task__title' : '']">{{tsk.name}}</h3>
+								<p class="task__desc" :class="[isActive ? 'd-task__desc' : '']" v-if="tsk.nameTask !== '' ">
+									{{tsk.nameTask}}
+								</p>
+								<h4>Дата и время начала</h4>
+								<p>{{tsk.dateStart}}</p>
+								<h4>Исполнитель</h4>
+								<p>{{tsk.trust}}</p>
+							</div>
+							<div class="task__wrap">
+								<button @click="edit(index)">
+									Редкактировать
+								</button>
+								<button @click="complite(index)">
+									Готово
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="box" @drop='onDrop($event, "done")' @dragover.prevent @dragenter.prevent
+						:class="[isActive ? 'd-box' : '']">
+						<h2 class="box__title">Готово ({{count.cDone}})</h2>
+						<div class="task" :class="[isActive ? 'd-task' : '']" v-for="(tsk, index) in tasks" :key='tsk.nameTask'
+							draggable @dragstart='startDrag($event, tsk)' v-if="tsk.status ==='done'">
+							<div class="task__wrap-text">
+								<h3 class="task__title" :class="[isActive ? 'd-task__title' : '']">{{tsk.name}}</h3>
+								<p class="task__desc" :class="[isActive ? 'd-task__desc' : '']" v-if="tsk.nameTask !== '' ">
+									{{tsk.nameTask}}
+								</p>
+								<h4>Времени всего</h4>
+								<p>{{tsk.dateAll}}</p>
+								<h4>Дата и время начала</h4>
+								<p>{{tsk.dateStart}}</p>
+								<h4>Дата и время окончания</h4>
+								<p>{{tsk.dateEnd}}</p>
+								<h4>Исполнитель</h4>
+								<p>{{tsk.trust}}</p>
+							</div>
+							<div class="task__wrap">
+								<button @click="edit(index)">
+									Редакатировать
+								</button>
+								<button @click="deleteDesk(index), c()">
+									Удалить
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="footer" :class="[isActive ? 'd-footer' : '']">
+		</footer>
+	</div>
+
+	<script src="js/vue.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
