@@ -2,7 +2,7 @@
 
 
 /*Импорт обнуления*/
-@import 'toImportExample.scss';
+@use 'toImportExample.scss';
 /*--------------------*/
 
 $light-red: color.adjust(red, $lightness: 20%);

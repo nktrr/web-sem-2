@@ -1,0 +1,165 @@
+.d-all {
+	background-color: #333333;
+	transition: .4s;
+}
+
+.d-header__title {
+	color: #ebebeb;
+	transition: .4s;
+}
+
+.d-wrap-theme__label {
+	color: #ebebeb;
+	transition: .4s;
+}
+
+.wrap-theme__mode .active {
+	transform: translateX(calc(100% + 4px));
+	transition: .4s;
+	background-color: #515e6e;
+}
+
+.d-wrap-theme__mode {
+	background: lightgray;
+	color: #fff;
+	box-shadow: 0 0 10px 5px lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.d-box {
+	box-shadow: inset 1px 1px 10px 5px lightgray, 1px 1px 10px 5px lightgray;
+	border: 2px solid black;
+	color: black;
+	transition: .4s;
+}
+
+.d-add__label {
+	color: white;
+	transition: .4s;
+}
+
+.d-add__input {
+	border: 2px solid grey;
+	color: grey;
+	transition: .4s;
+	background: rgb(39, 39, 39);
+}
+
+.d-add__input:disabled {
+	background: rgb(39, 39, 39);
+	border: 2px solid grey;
+	box-shadow: inset 1px 1px 5px 1px black, 1px 1px 5px 1px black;
+	color: #f0f0f0ab;
+}
+
+.d-add__input::placeholder {
+	color: grey;
+	font-size: 1em;
+}
+
+.d-add__btn {
+	background: grey;
+	transition: .4s;
+}
+
+.d-add__button-on,
+.d-add__button-off {
+	border: 2px solid black;
+	background: black;
+	transition: .4s;
+}
+
+.d-add__button-on:hover span,
+.d-add__button-on:hover span::after,
+.d-add__button-off:hover span,
+.d-add__button-off:hover span::after {
+	background: #3da1ff;
+}
+
+.d-wrap-modal {
+	background: #fffeffad;
+	transition: .4s;
+}
+
+.d-wrap-modal__form {
+	background: black;
+	border:2px solid grey;
+	transition: .4s;
+	box-shadow: 1px 1px 10px 5px lightgray;
+	border-radius: 5px;
+}
+
+.d-wrap-modal__input {
+	color: white;
+	transition: .4s;
+}
+
+.d-wrap-modal__input select {
+	background-image: url(../img/d-down-arrow.svg);
+}
+
+.d-task {
+	background: black;
+	transition: .4s;
+}
+
+.d-task__title {
+	color: white;
+	transition: .4s;
+}
+
+.d-task__desc {
+	color: white!important;
+	transition: .4s;
+}
+
+.d-svg-edit,
+.d-svg-complite,
+.d-svg-del {
+	transition: .4s;
+}
+
+.d-footer {
+	background-color: #333c46;
+	color: #ebebeb;
+	transition: .4s;
+}
+
+.d-svg-edit path {
+	fill: white;
+}
+
+.d-svg-complite path {
+	fill: white;
+}
+
+.d-svg-del path {
+	fill: white;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: .5s;
+}
+.task__wrap-text{
+	color:grey!important;
+}
+.task__wrap-text h4{
+	color:grey!important;
+}
+.task__wrap-text p{
+	color:grey!important;
+}
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+.task__wrap-img button:hover * {
+	color: grey;
+	fill: grey;
+}

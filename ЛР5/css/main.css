@@ -22,6 +22,7 @@ option{
 	 background-color: #FFC8A8;
 	 color: black;
 }
+
 .row > div{
   text-align: center;
 }
@@ -82,6 +83,11 @@ option{
 		border: 1px solid black;
 		box-shadow: none;
 	}
+
+	.columns_container:nth-child(3){
+		background-color: white;
+		color: black;
+   }
 	
 	
 	@page{
